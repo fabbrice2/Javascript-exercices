@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mooli&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form">
+      <form action="#">
+        <div class="email">
+          <label for="email"><strong>Email</strong></label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="password">
+          <label for="password"><strong>Mot de passe</strong></label>
+          <div class="pass-input">
+            <input type="password" name="password" id="password" />
+            <ion-icon id="eye-icon" name="eye-off-outline"></ion-icon>
+          </div>
+          <div id="password-instructions">
+            <div class="item uppercase">
+              <ion-icon id="close-icon" name="close-outline"></ion-icon>
+              <span>Au moins une lettre majuscule</span>
+            </div>
+            <div class="item number">
+              <ion-icon id="close-icon" name="close-outline"></ion-icon>
+              <span>Au moins un chiffre</span>
+            </div>
+            <div class="item special">
+              <ion-icon id="close-icon" name="close-outline"></ion-icon>
+              <span>Au moins un caractère spécial(@$!%*?&)</span>
+            </div>
+            <div class="item length">
+              <ion-icon id="close-icon" name="close-outline"></ion-icon>
+              <span>Au moins 8 caractère</span>
+            </div>
+          </div>
+        </div>
+        <button id="btn">Allons-y!</button>
+      </form>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

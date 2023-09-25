@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Mooli", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dfebfc;
+}
+.form {
+  width: 400px;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+#email,
+#password {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+#password {
+  border: none;
+  border-radius: 0px;
+  padding: 0;
+  flex: 1;
+}
+.pass-input {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+#password-instructions .item {
+  display: flex;
+  justify-content: start;
+  gap: 5;
+  align-items: center;
+  color: red;
+}
+#password-instructions .item span {
+  font-size: 13px;
+}
+#btn {
+  padding: 7px 10px;
+  border-radius: 5px;
+  background: #2667ca;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#eye-icon{
+  cursor: pointer;
+}
