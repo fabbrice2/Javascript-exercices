@@ -58,6 +58,9 @@ body {
   align-items: center;
   color: red;
 }
+#password-instructions .item.complete {
+  color: green;
+}
 #password-instructions .item span {
   font-size: 13px;
 }
