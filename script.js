@@ -21,14 +21,42 @@ $eyeIcon.addEventListener("click", function () {
 
 $passwordInput.addEventListener("input", function () {
   const $passwordValue = $passwordInput.value;
-  
+
   const $isUppercase = /[A-Z]/.test($passwordValue);
   const $isNumber = /\d/.test($passwordValue);
   const $isSpecial = /[@$!%*?&]/.test($passwordValue);
   const $isLengthValid = $passwordValue.length >= 8;
 
-  $uppercase.classList.toggle("complete", $isUppercase);
-  $number.classList.toggle("complete", $isNumber);
-  $special.classList.toggle("complete", $isSpecial);
-  $length.classList.toggle("complete", $isLengthValid);
+  if ($isUppercase) {
+    $uppercase.classList.add("complete");
+    document.querySelector(".uppercase ion-icon").setAttribute("name", "checkmark-outline");
+  } else {
+    $uppercase.classList.remove("complete");
+    document.querySelector(".uppercase ion-icon").setAttribute("name", "close-outline");
+  }
+
+  if ($isNumber) {
+    $number.classList.add("complete");
+    document.querySelector(".number ion-icon").setAttribute("name", "checkmark-outline");
+  } else {
+    $number.classList.remove("complete");
+    document.querySelector(".number ion-icon").setAttribute("name", "close-outline");
+  }
+
+  if ($isSpecial) {
+    $special.classList.add("complete");
+    document.querySelector(".special ion-icon").setAttribute("name", "checkmark-outline");
+  } else {
+    $special.classList.remove("complete");
+    document.querySelector(".special ion-icon").setAttribute("name", "close-outline");
+  }
+
+  if ($isLengthValid) {
+    $length.classList.add("complete");
+    document.querySelector(".length ion-icon").setAttribute("name", "checkmark-outline");
+  } else {
+    $length.classList.remove("complete");
+    document.querySelector(".length ion-icon").setAttribute("name", "close-outline");
+  }
 });
+
